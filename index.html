@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+NL+Guides&display=swap" rel="stylesheet">
+    </head>
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Journal de bord</title>
+</head>
+<body>
+    <h1>Journal de bord</h1>
+    <div class="container">
+
+        <div class="champs">
+            <input type="text" id="taskInput" placeholder="Ce que j'ai fait Ajourd'hui"> <!--placeholder permet de mettre un text indicatif sur notre barre de texte-->
+            <input type="number" id="taskEff" max ="10" min ="0"placeholder="/10" > 
+            <button onclick="addTask()"> <ion-icon name="add-circle"></ion-icon> </button>
+        </div>
+        <div class="list-container">
+            <ul id="taskList"></ul>
+        </div>
+
+        <div class="actions">
+            <button onclick="saveToFile()">Sauvegarder</button>
+            <input type="file" id="fileInput" onchange="loadFromFile(event)" />
+        </div>
+        
+    </div>
+    
+        
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

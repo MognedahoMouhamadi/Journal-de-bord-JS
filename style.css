@@ -1,0 +1,185 @@
+
+
+
+  .playwrite-nl-guides-regular {
+    font-family: "Playwrite NL Guides", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+body{
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: "Playwrite NL Guides";
+    background: linear-gradient(180deg,  #7dffd8, #fbffbf) ;
+    background-repeat: repeat-y;
+}
+
+.container{
+    max-height: 500px; /* Fixe une hauteur globale pour tout le contenu */
+    overflow: hidden; /* Coupe les éléments qui dépassent */
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.champs{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+}
+button{
+
+background: transparent;
+border: none;
+cursor: pointer;
+margin-left: 5px;
+padding: 0px;
+}
+
+h1 {
+    max-height: 80px; /* Limite la hauteur du titre */
+    overflow: hidden; /* Coupe le texte s'il dépasse */
+    text-overflow: ellipsis; /* Ajoute des points de suspension si le texte est trop long */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+}
+
+input[type="text"]{
+
+    width: 300;
+    height: 50px;
+    padding: 10px;
+    border-radius:  15px;
+    margin-bottom: 10px;
+    border: none;
+
+
+}
+
+input[type="number"]{
+
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius:  15px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    border: none;
+
+
+}
+
+ul{
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    max-height: 400px; /* Définir une hauteur maximale */
+    overflow-y: auto; /* Activer le défilement vertical si nécessaire */
+    list-style: none;
+    padding: 0;
+
+    scrollbar-width: thin; /* Réduit la largeur de la barre de défilement sur Firefox */
+    scrollbar-color: #888 #f1f1f1; /* Couleur de la barre et de l'arrière-plan */
+
+}
+
+/* les Webkit c'est pour la gestion telphone */
+
+ul::-webkit-scrollbar {
+    width: 8px; /* Largeur de la barre de défilement */
+}
+
+ul::-webkit-scrollbar-thumb {
+    background-color: #888; /* Couleur de la barre de défilement */
+    border-radius: 10px; /* Arrondi pour un look plus moderne */
+}
+
+ul::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Couleur au survol */
+}
+
+ul::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Couleur de l'arrière-plan de la barre */
+    border-radius: 10px; /* Ajoute aussi des coins arrondis à la piste */
+}
+
+ul {
+    overscroll-behavior: contain; /* Empêche les rebonds excessifs */
+    -webkit-overflow-scrolling: touch; /* Active le défilement fluide sur iOS et Android */
+}
+
+ul:before {
+    content: 'Faites défiler ↓'; /* Indique visuellement le défilement */
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+ul li {
+
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    
+
+}
+
+
+.modify{
+
+    background: #ffffff;
+}
+.delete{
+
+    background: crimson;
+}
+
+ion-icon {
+    font-size: 30px;
+    margin-right: 5px;
+    background: transparent;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espace entre les boutons */
+    margin-top: 10px;
+    position: sticky; /* Les boutons restent visibles même en cas de défilement */
+    bottom: 0; /* Fixé en bas de la zone visible */
+    background: white; /* Fond pour éviter qu'ils soient masqués par le contenu */
+    padding: 10px;
+    z-index: 10;
+    border-top: 10px solid #ccc;
+    border-color: white ;
+
+}
+
+.actions button, .actions input {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
